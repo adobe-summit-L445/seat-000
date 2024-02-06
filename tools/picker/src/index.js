@@ -66,37 +66,47 @@ const blocks = {
         'selection': 'single',
         'type': 'item',
     },
-    'product-carousel': {
-        'key': 'product-carousel',
-        'name': 'Product Carousel',
+    'product-metadata': {
+        'key': 'product-metadata',
+        'name': 'Product Metadata',
         'output': items => `<table width="100%" style="border: 1px solid black;">
             <tr>
-                <th style="border: 1px solid black; background: lightgray;">Product Carousel</th>
+                <th colspan="2" style="border: 1px solid black; background: lightgray;">Metadata</th>
             </tr>
             <tr>
-                <td style="border: 1px solid black">
-                    <ul>
-                        ${items.map(i => `<li>${i.sku}</li>`).join('')}
-                    </ul>
-                </td>
+                <td style="border: 1px solid black">title</td>
+                <td style="border: 1px solid black"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black">enrichment-products</td>
+                <td style="border: 1px solid black">${items.map(i => i.sku).join(',')}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black">enrichment-positions</td>
+                <td style="border: 1px solid black"></td>
             </tr>
         </table>`,
         'selection': 'multiple',
         'type': 'item',
     },
-    'category-carousel': {
-        'key': 'category-carousel',
-        'name': 'Category Carousel',
+    'category-metadata': {
+        'key': 'category-metadata',
+        'name': 'Category Metadata',
         'output': items => `<table width="100%" style="border: 1px solid black;">
             <tr>
-                <th style="border: 1px solid black; background: lightgray;">Category Carousel</th>
+                <th colspan="2" style="border: 1px solid black; background: lightgray;">Metadata</th>
             </tr>
             <tr>
-                <td style="border: 1px solid black">
-                    <ul>
-                        ${items.map(i => `<li>${i.id}</li>`).join('')}
-                    </ul>
-                </td>
+                <td style="border: 1px solid black">title</td>
+                <td style="border: 1px solid black"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black">enrichment-categories</td>
+                <td style="border: 1px solid black">${items.map(i => i.id).join(',')}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black">enrichment-positions</td>
+                <td style="border: 1px solid black"></td>
             </tr>
         </table>`,
         'selection': 'multiple',
