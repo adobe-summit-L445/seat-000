@@ -39,25 +39,5 @@ export default async function decorate(block) {
   // Render Containers
   return productRenderer.render(ProductDetails, {
     sku: getSkuFromUrl(),
-    slots: {
-      Actions: (ctx) => {
-        // Add to Cart Button
-        ctx.appendButton({
-          text: 'Add to Cart',
-          icon: 'Cart',
-          variant: 'primary',
-          onClick: async () => {
-            addProductsToCart([{ ...ctx.values }]);
-          },
-        });
-
-        // Add to Wishlist Button
-        // ctx.appendButton({
-        //   icon: 'Heart',
-        //   variant: 'primary',
-        //   onClick: () => console.debug('Add to Wishlist', ctx.data),
-        // });
-      },
-    },
   })(block);
 }
