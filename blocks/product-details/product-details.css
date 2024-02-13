@@ -1,2 +1,34 @@
 /* stylelint-disable selector-class-pattern */
 /* stylelint-disable no-empty-source */
+.elsie-base-design .pdp-product__title,
+.elsie-base-design .elsie-price.pdp-product__price {
+  font-family: "Source Serif Pro";
+}
+
+.elsie-base-design .pdp-product__sku {
+  font-size: 10px;
+}
+
+.elsie-base-design .pdp-swatches__field__label {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.elsie-base-design .pdp-product__attributes {
+  border-top: 3px solid var(--color-brand-500);
+  padding-top: 5px;
+}
+
+.elsie-base-design .elsie-text-swatch__label,
+.elsie-base-design .elsie-incrementer__increase-button,
+.elsie-base-design .elsie-incrementer__decrease-button {
+  transition: background-color 0.25s ease-out, color 0.25s ease-out,
+    box-shadow 0.25s ease-out;
+}
+
+.elsie-base-design .elsie-text-swatch__label:hover,
+.elsie-base-design .elsie-incrementer__increase-button:hover:enabled,
+.elsie-base-design .elsie-incrementer__decrease-button:hover:enabled {
+  background-color: var(--color-brand-500);
+  box-shadow: 0 0 0 var(--shape-border-width-1) var(--color-neutral-900);
+}
