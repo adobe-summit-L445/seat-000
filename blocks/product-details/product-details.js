@@ -39,5 +39,15 @@ export default async function decorate(block) {
   // Render Containers
   return productRenderer.render(ProductDetails, {
     sku: getSkuFromUrl(),
+    carousel: {
+      controls: 'thumbnailsColumn', // 'thumbnailsColumn', 'thumbnailsRow', 'dots'
+      mobile: true,
+    },
+    onAddToCart: (args) => {
+      alert(JSON.stringify(args, null, 2));
+    },
+    slots: {
+      // ???? 🔮 What could this be?
+    },
   })(block);
 }
