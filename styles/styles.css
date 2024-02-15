@@ -14,7 +14,7 @@
 
 :root,
 .elsie-base-design.elsie-base-design {
-  /* Elsie base design */
+  /* Adobe Drop-In Component design tokens */
   --color-brand-300: #6d6d6d;
   --color-brand-500: #454545;
   --color-brand-600: #383838;
