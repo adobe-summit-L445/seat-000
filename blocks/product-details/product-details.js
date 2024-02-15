@@ -44,7 +44,9 @@ export default async function decorate(block) {
       mobile: true,
     },
     onAddToCart: (args) => {
-      alert(JSON.stringify(args, null, 2));
+      // eslint-disable-next-line no-console
+      console.debug('onAddToCart', args);
+      addProductsToCart([args]);
     },
     slots: {
       // ???? 🔮 What could this be?

@@ -130,6 +130,7 @@ function renderProduct(product, config, block) {
       const { addProductsToCart } = await import('@dropins/storefront-cart/api.js');
       // TODO: productId not exposed by catalog service as number
       window.adobeDataLayer.push({ productContext: { productId: 0, ...product } });
+      // eslint-disable-next-line no-console
       console.debug('onAddToCart', values);
       addProductsToCart(values);
     });

@@ -24,4 +24,5 @@ fs.readdirSync('node_modules/@dropins', { withFileTypes: true }).forEach((file) 
   });
 });
 
+// eslint-disable-next-line no-console
 console.log('🫡 Drop-ins installed successfully!');
